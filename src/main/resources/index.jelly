@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  This plugin exposes the Jackson 2 JSON APIs to other Jenkins plugins.
+</div>
