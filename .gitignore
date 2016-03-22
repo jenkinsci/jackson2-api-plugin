@@ -1,4 +1,6 @@
 # Maven build files
+release.properties
+pom.xml.*Backup
 target/
 
 # Jenkins plugin development
