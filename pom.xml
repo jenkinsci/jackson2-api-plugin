@@ -32,7 +32,7 @@
   <description>
     This plugin exposes the Jackson 2 JSON APIs to other Jenkins plugins.
   </description>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/Jackson2+API+Plugin</url>
+  <url>https://wiki.jenkins.io/display/JENKINS/Jackson2+API+Plugin</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -45,6 +45,10 @@
     <developer>
       <id>stephenconnolly</id>
       <name>Stephen Connolly</name>
+    </developer>
+    <developer>
+      <id>oleg_nenashev</id>
+      <name>Oleg Nenashev</name>
     </developer>
   </developers>
 
