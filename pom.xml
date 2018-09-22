@@ -53,7 +53,7 @@
   </developers>
 
   <prerequisites>
-    <maven>2.2.1</maven>
+    <maven>3.3.9</maven>
   </prerequisites>
 
   <scm>
