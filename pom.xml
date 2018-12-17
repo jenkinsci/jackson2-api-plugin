@@ -50,6 +50,10 @@
       <id>oleg_nenashev</id>
       <name>Oleg Nenashev</name>
     </developer>
+    <developer>
+      <id>jvz</id>
+      <name>Matt Sicker</name>
+    </developer>
   </developers>
 
   <prerequisites>
@@ -64,11 +68,11 @@
   </scm>
 
   <properties>
-    <revision>2.9.7.2</revision>
+    <revision>2.9.8</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.60.3</jenkins.version>
-    <jackson.version>2.9.7</jackson.version>
+    <jackson.version>2.9.8</jackson.version>
   </properties>
 
   <repositories>
