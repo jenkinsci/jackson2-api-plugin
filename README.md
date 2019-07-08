@@ -1,6 +1,6 @@
 # Jackson 2 API Plugin
 
-This plugin exposes the [FasterXML Jackson 2](http://fasterxml.com/projects.html) API to Jenkins plugins.
+This plugin exposes the [FasterXML Jackson 2](https://github.com/FasterXML/jackson) API to Jenkins plugins.
 
 See also this [plugin's wiki page][wiki]
 
