@@ -25,7 +25,7 @@
   </parent>
 
   <artifactId>jackson2-api</artifactId>
-  <version>2.10.0</version>
+  <version>${revision}${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Jackson 2 API Plugin</name>
@@ -64,11 +64,11 @@
     <connection>scm:git:git://github.com/jenkinsci/jackson2-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/jackson2-api-plugin.git</developerConnection>
     <url>http://github.com/jenkinsci/jackson2-api-plugin</url>
-    <tag>jackson2-api-2.10.0</tag>
+    <tag>${scmTag}</tag>
   </scm>
 
   <properties>
-    <revision>2.10.0</revision>
+    <revision>2.10.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.138.4</jenkins.version>
