@@ -1,5 +1,9 @@
 # Version History
 
+### Newer versions
+
+See [GitHub Releases](https://github.com/jenkinsci/jackson2-api-plugin/releases).
+
 ### 2.9.10
 
 Release date: (Sep 23, 2019)
