@@ -1,31 +1,13 @@
 # Jackson 2 API Plugin
 
 This plugin exposes the [FasterXML Jackson 2](https://github.com/FasterXML/jackson) API to Jenkins plugins.
+See [FasterXML Jackson Databind GitHub repo](https://github.com/FasterXML/jackson-databind) for more information.
 
-See also this [plugin's wiki page][wiki]
+# Developer documentation
 
-# Environment
+See the [Jenkins Developer Documentation](https://jenkins.io/doc/developer/book/).
 
-The following build environment is required to build this plugin
+Cheatsheet:
 
-* `java-1.8` and `maven-3.3.9`
-
-# Build
-
-To build the plugin locally:
-
-    mvn clean verify
-
-# Release
-
-To release the plugin:
-
-    mvn release:prepare release:perform -B
-
-# Test local instance
-
-To test in a local Jenkins instance
-
-    mvn hpi:run
-
-  [wiki]: http://wiki.jenkins-ci.org/display/JENKINS/Jackson2+API+Plugin
+* To build the plugin locally: `mvn clean verify`
+* To test in a local Jenkins instance: `mvn hpi:run`
