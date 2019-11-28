@@ -7,7 +7,12 @@
 This plugin exposes the [FasterXML Jackson 2](https://github.com/FasterXML/jackson) API to Jenkins plugins.
 See [FasterXML Jackson Databind GitHub repo](https://github.com/FasterXML/jackson-databind) for more information.
 
-# Developer documentation
+## Changelog
+
+* See [GitHub Releases](https://github.com/jenkinsci/jackson2-api-plugin/releases) for recent versions
+* See [Release Notes](./CHANGELOG.md) for version 2.10.0 and older
+
+## Developer documentation
 
 See the [Jenkins Developer Documentation](https://jenkins.io/doc/developer/book/).
 
