@@ -71,7 +71,7 @@
     <revision>2.10.4</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
-    <jenkins.version>2.138.4</jenkins.version>
+    <jenkins.version>2.150.3</jenkins.version>
     <jackson.version>2.10.3</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
