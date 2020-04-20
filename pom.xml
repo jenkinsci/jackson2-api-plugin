@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>3.57</version>
+    <version>4.1</version>
   </parent>
 
   <artifactId>jackson2-api</artifactId>
@@ -71,7 +71,7 @@
     <revision>2.10.4</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
-    <jenkins.version>2.138.4</jenkins.version>
+    <jenkins.version>2.164.3</jenkins.version>
     <jackson.version>2.10.3</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
