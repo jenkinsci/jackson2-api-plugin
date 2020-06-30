@@ -36,7 +36,7 @@
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -56,14 +56,10 @@
     </developer>
   </developers>
 
-  <prerequisites>
-    <maven>3.3.9</maven>
-  </prerequisites>
-
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/jackson2-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/jackson2-api-plugin.git</developerConnection>
-    <url>http://github.com/jenkinsci/jackson2-api-plugin</url>
+    <url>https://github.com/jenkinsci/jackson2-api-plugin</url>
     <tag>${scmTag}</tag>
   </scm>
 
@@ -71,7 +67,7 @@
     <revision>2.11.2</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
-    <jenkins.version>2.164.3</jenkins.version>
+    <jenkins.version>2.222.4</jenkins.version>
     <jackson.version>2.11.1</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
@@ -93,8 +89,8 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.164.x</artifactId>
-        <version>10</version>
+        <artifactId>bom-2.222.x</artifactId>
+        <version>11</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
