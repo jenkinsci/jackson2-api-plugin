@@ -64,7 +64,7 @@
   </scm>
 
   <properties>
-    <revision>2.12.4-1</revision>
+    <revision>${jackson.version}-1</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.249.1</jenkins.version>
