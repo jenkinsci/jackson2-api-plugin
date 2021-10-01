@@ -64,11 +64,11 @@
   </scm>
 
   <properties>
-    <revision>2.12.4-2</revision>
+    <revision>2.12.4</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.249.1</jenkins.version>
-    <jackson.version>2.12.4</jackson.version>
+    <jackson.version>${revision}</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
 
