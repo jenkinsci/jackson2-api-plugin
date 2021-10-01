@@ -69,7 +69,7 @@
     <java.level>8</java.level>
     <jenkins.version>2.249.1</jenkins.version>
     <jackson.version>${revision}</jackson.version>
-    <jackson-databind.version>${jackson.version}</jackson-databind.version>
+    <jackson-databind.version>2.13.0</jackson-databind.version>
   </properties>
 
   <repositories>
