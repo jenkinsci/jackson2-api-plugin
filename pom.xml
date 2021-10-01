@@ -25,7 +25,7 @@
   </parent>
 
   <artifactId>jackson2-api</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${revision}-${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Jackson 2 API Plugin</name>
@@ -64,11 +64,11 @@
   </scm>
 
   <properties>
-    <revision>2.12.4-2</revision>
-    <changelist>-SNAPSHOT</changelist>
+    <revision>2.12.4</revision>
+    <changelist>999999-SNAPSHOT</changelist>
     <java.level>8</java.level>
     <jenkins.version>2.249.1</jenkins.version>
-    <jackson.version>2.12.4</jackson.version>
+    <jackson.version>${revision}</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
 
