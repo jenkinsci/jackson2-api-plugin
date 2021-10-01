@@ -67,7 +67,7 @@
     <revision>2.12.5</revision>
     <changelist>-SNAPSHOT</changelist>
     <java.level>8</java.level>
-    <jenkins.version>2.222.4</jenkins.version>
+    <jenkins.version>2.249.1</jenkins.version>
     <jackson.version>2.12.4</jackson.version>
     <jackson-databind.version>${jackson.version}</jackson-databind.version>
   </properties>
@@ -89,8 +89,8 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.222.x</artifactId>
-        <version>887.vae9c8ac09ff7</version>
+        <artifactId>bom-2.249.x</artifactId>
+        <version>966.v3857b7c82032</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -144,6 +144,17 @@
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-jaxb-annotations</artifactId>
       <version>${jackson.version}</version>
+      <exclusions>
+        <exclusion>
+          <!--
+            Jenkins core ships jakarta.activation:jakarta.activation (ie the impl which contains both api and impl classes) version 1.2.1
+            since https://github.com/jenkinsci/jenkins/pull/4660 via transitive dependency on jakarta-mail
+            Need to be careful here if the annotations (or core) pick up newer versions that change the package names.
+          -->
+          <groupId>jakarta.activation</groupId>
+          <artifactId>jakarta.activation-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
