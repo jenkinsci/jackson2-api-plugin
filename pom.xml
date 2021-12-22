@@ -184,6 +184,11 @@
       <artifactId>jackson-jaxrs-json-provider</artifactId>
       <version>${revision}</version>
     </dependency>
+    <dependency> <!-- needed for jackson-jaxrs-json-provider -->
+        <groupId>jakarta.ws.rs</groupId>
+        <artifactId>jakarta.ws.rs-api</artifactId>
+        <version>2.1.6</version> <!-- do not upgrade to version 3.x, as that has switched to Jakarta package names -->
+    </dependency>
 
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
