@@ -185,9 +185,10 @@
       <version>${revision}</version>
     </dependency>
     <dependency> <!-- needed for jackson-jaxrs-json-provider -->
-        <groupId>jakarta.ws.rs</groupId>
-        <artifactId>jakarta.ws.rs-api</artifactId>
-        <version>2.1.6</version> <!-- do not upgrade to version 3.x, as that has switched to Jakarta package names -->
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>jersey2-api</artifactId>
+        <version>2.35-1</version>
+        <optional>true</optional>
     </dependency>
 
     <dependency>
