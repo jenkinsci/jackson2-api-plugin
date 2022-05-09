@@ -66,8 +66,7 @@
   <properties>
     <revision>2.13.2.20220328</revision>
     <changelist>999999-SNAPSHOT</changelist>
-    <java.level>8</java.level>
-    <jenkins.version>2.249.1</jenkins.version>
+    <jenkins.version>2.263.1</jenkins.version>
   </properties>
 
   <repositories>
@@ -94,7 +93,7 @@
       </dependency>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.249.x</artifactId>
+        <artifactId>bom-2.263.x</artifactId>
         <version>984.vb5eaac999a7e</version>
         <scope>import</scope>
         <type>pom</type>
@@ -142,14 +141,15 @@
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-jaxb-annotations</artifactId>
       <exclusions>
+        <!-- Provided by javax-activation-api plugin -->
         <exclusion>
-          <!--
-            Jenkins core ships jakarta.activation:jakarta.activation (ie the impl which contains both api and impl classes) version 1.2.1
-            since https://github.com/jenkinsci/jenkins/pull/4660 via transitive dependency on jakarta-mail
-            Need to be careful here if the annotations (or core) pick up newer versions that change the package names.
-          -->
           <groupId>jakarta.activation</groupId>
           <artifactId>jakarta.activation-api</artifactId>
+        </exclusion>
+        <!-- Provided by jaxb plugin -->
+        <exclusion>
+          <groupId>jakarta.xml.bind</groupId>
+          <artifactId>jakarta.xml.bind-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -173,6 +173,18 @@
           <artifactId>snakeyaml</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>javax-activation-api</artifactId>
+      <version>1.2.0-3</version> <!-- TODO use version from BOM when possible -->
+    </dependency>
+
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>jaxb</artifactId>
+      <version>2.3.6-1</version> <!-- TODO use version from BOM when possible -->
     </dependency>
 
     <dependency>
