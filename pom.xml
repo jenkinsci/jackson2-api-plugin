@@ -64,7 +64,7 @@
   </scm>
 
   <properties>
-    <revision>2.15.2</revision>
+    <revision>2.15.3</revision>
     <changelist>999999-SNAPSHOT</changelist>
     <jenkins.version>2.361.4</jenkins.version>
   </properties>
