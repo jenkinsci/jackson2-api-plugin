@@ -21,7 +21,8 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.76</version>
+    <version>4.78</version>
+    <relativePath />
   </parent>
 
   <artifactId>jackson2-api</artifactId>
@@ -94,7 +95,7 @@
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-2.401.x</artifactId>
-        <version>2555.v3190a_8a_c60c6</version>
+        <version>2745.vc7b_fe4c876fa_</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -120,6 +121,13 @@
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-json-org</artifactId>
+      <exclusions>
+        <!-- Provided by json-api plugin -->
+        <exclusion>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     
     <dependency>
@@ -191,9 +199,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.json</groupId>
-      <artifactId>json</artifactId>
-      <version>20231013</version>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>json-api</artifactId>
     </dependency>
 
   </dependencies>
