@@ -1,25 +1,19 @@
 package com.fasterxml.jackson.dataformat.xml;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
-import org.jvnet.hudson.test.RealJenkinsRule;
+import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 
 import java.nio.charset.StandardCharsets;
 
-public class XmlMapperTest {
-
-    @Rule public RealJenkinsRule rr = new RealJenkinsRule();
+@WithJenkins
+class XmlMapperTest {
 
     @Test
-    public void smokes() throws Throwable {
-        rr.then(XmlMapperTest::_smokes);
-    }
-
-    private static void _smokes(JenkinsRule r) throws Throwable {
+    void smokes(@SuppressWarnings("unused") JenkinsRule r) throws Throwable {
         XmlMapper mapper = new XmlMapper();
         String content = "<foo><bar><id>123</id></bar></foo>";
         Foo foo = mapper.readValue(content.getBytes(StandardCharsets.UTF_8), Foo.class);
