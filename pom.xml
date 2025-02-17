@@ -189,6 +189,11 @@
     </dependency>
 
     <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-toml</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>javax-activation-api</artifactId>
     </dependency>
