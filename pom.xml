@@ -179,6 +179,11 @@
 
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-toml</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-yaml</artifactId>
       <exclusions>
         <exclusion>
