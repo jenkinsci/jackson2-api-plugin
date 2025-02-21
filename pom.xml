@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.88</version>
+    <version>5.7</version>
     <relativePath />
   </parent>
 
@@ -72,7 +72,9 @@
   <properties>
     <revision>2.17.0</revision>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.401.3</jenkins.version>
+    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+    <jenkins.baseline>2.479</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.1</jenkins.version>
   </properties>
 
   <repositories>
@@ -99,8 +101,8 @@
       </dependency>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.401.x</artifactId>
-        <version>2745.vc7b_fe4c876fa_</version>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
+        <version>4136.vca_c3202a_7fd1</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -134,7 +136,7 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
+
     <dependency>
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-parameter-names</artifactId>
