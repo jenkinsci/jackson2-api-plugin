@@ -40,11 +40,6 @@
       <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
-    <license>
-      <!-- for the ASM library that byte-buddy shades JENKINS-75276 -->
-      <name>BSD 3-Clause ASM</name>
-      <url>https://gitlab.ow2.org/asm/asm/raw/ASM_9_7_1/LICENSE.txt</url>
-    </license>
   </licenses>
 
   <developers>
@@ -72,7 +67,9 @@
   <properties>
     <revision>2.17.0</revision>
     <changelist>999999-SNAPSHOT</changelist>
-    <jenkins.version>2.401.3</jenkins.version>
+    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+    <jenkins.baseline>2.462</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
   </properties>
 
   <repositories>
@@ -99,8 +96,8 @@
       </dependency>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.401.x</artifactId>
-        <version>2745.vc7b_fe4c876fa_</version>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
+        <version>4228.v0a_71308d905b_</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -111,6 +108,13 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
+      <exclusions>
+        <!-- Provided by byte-buddy-api plugin -->
+        <exclusion>
+          <groupId>net.bytebuddy</groupId>
+          <artifactId>byte-buddy</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -191,6 +195,11 @@
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-toml</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>byte-buddy-api</artifactId>
     </dependency>
 
     <dependency>
