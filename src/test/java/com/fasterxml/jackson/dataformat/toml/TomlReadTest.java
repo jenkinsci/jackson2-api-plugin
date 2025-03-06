@@ -27,9 +27,9 @@ public class TomlReadTest {
         String content = "title = \"Title\"\n[section]\nvalue = 1\n";
         Reader tomlReader = new StringReader(content);
         Map data = new ObjectMapper(new TomlFactory()).readValue(tomlReader, Map.class);
-        assertEquals(data.get("title"), "Title");
+        assertEquals("Title", data.get("title"));
         Map section = (Map) data.get("section");
         assertNotNull(section);
-        assertEquals(section.get("value"), 1);
+        assertEquals(1, section.get("value"));
     }
 }
