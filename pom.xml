@@ -40,6 +40,11 @@
       <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
+    <license>
+      <!-- for the ASM library that byte-buddy shades JENKINS-75276 -->
+      <name>BSD 3-Clause ASM</name>
+      <url>https://gitlab.ow2.org/asm/asm/raw/ASM_9_7_1/LICENSE.txt</url>
+    </license>
   </licenses>
 
   <developers>
@@ -183,6 +188,11 @@
           <artifactId>snakeyaml</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-toml</artifactId>
     </dependency>
 
     <dependency>
