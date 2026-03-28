@@ -75,7 +75,7 @@
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
     <jenkins.baseline>2.479</jenkins.baseline>
     <jenkins.version>${jenkins.baseline}.1</jenkins.version>
-    <hpi.bundledArtifacts>jackson-annotations,jackson-core,jackson-databind,jackson-dataformat-cbor,jackson-dataformat-csv,jackson-dataformat-toml,jackson-dataformat-xml,jackson-dataformat-yaml,jackson-datatype-jdk8,jackson-datatype-json-org,jackson-datatype-jsr310,jackson-module-jakarta-xmlbind-annotations,jackson-module-jaxb-annotations,jackson-module-parameter-names,stax2-api,woodstox-core</hpi.bundledArtifacts>
+    <hpi.bundledArtifacts>jackson-annotations,jackson-core,jackson-databind,jackson-dataformat-cbor,jackson-dataformat-csv,jackson-dataformat-toml,jackson-dataformat-xml,jackson-dataformat-yaml,jackson-datatype-jdk8,jackson-datatype-json-org,jackson-datatype-jsr310,jackson-module-jakarta-xmlbind-annotations,jackson-module-jaxb-annotations,jackson-module-parameter-names</hpi.bundledArtifacts>
     <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
     <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
   </properties>
@@ -114,6 +114,12 @@
         <groupId>io.jenkins.plugins</groupId>
         <artifactId>jakarta-xml-bind-api</artifactId>
         <version>4.0.5-3.v3d5b_a_73965b_9</version>
+      </dependency>
+      <!-- TODO until in BOM -->
+      <dependency>
+        <groupId>io.jenkins.plugins</groupId>
+        <artifactId>woodstox-core-api</artifactId>
+        <version>7.1.1-1.v4d297985f397</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -208,6 +214,22 @@
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-xml</artifactId>
+      <!-- Provided by woodstox-core API plugin -->
+      <exclusions>
+        <exclusion>
+          <groupId>com.fasterxml.woodstox</groupId>
+          <artifactId>woodstox-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.codehaus.woodstox</groupId>
+          <artifactId>stax2-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>io.jenkins.plugins</groupId>
+      <artifactId>woodstox-core-api</artifactId>
     </dependency>
 
     <dependency>
