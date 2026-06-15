@@ -73,7 +73,7 @@
     <revision>2.21.2</revision>
     <changelist>999999-SNAPSHOT</changelist>
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-    <jenkins.baseline>2.479</jenkins.baseline>
+    <jenkins.baseline>2.541</jenkins.baseline>
     <jenkins.version>${jenkins.baseline}.1</jenkins.version>
     <hpi.bundledArtifacts>jackson-core,jackson-databind,jackson-dataformat-cbor,jackson-dataformat-csv,jackson-dataformat-toml,jackson-dataformat-xml,jackson-dataformat-yaml,jackson-datatype-jdk8,jackson-datatype-json-org,jackson-datatype-jsr310,jackson-module-jakarta-xmlbind-annotations,jackson-module-jaxb-annotations,jackson-module-parameter-names</hpi.bundledArtifacts>
     <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
@@ -105,21 +105,9 @@
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-${jenkins.baseline}.x</artifactId>
-        <version>4136.vca_c3202a_7fd1</version>
+        <version>6329.v403d8c87a_5ce</version>
         <scope>import</scope>
         <type>pom</type>
-      </dependency>
-      <!-- TODO until in BOM -->
-      <dependency>
-        <groupId>io.jenkins.plugins</groupId>
-        <artifactId>jakarta-xml-bind-api</artifactId>
-        <version>4.0.5-3.v3d5b_a_73965b_9</version>
-      </dependency>
-      <!-- TODO until in BOM -->
-      <dependency>
-        <groupId>io.jenkins.plugins</groupId>
-        <artifactId>woodstox-core-api</artifactId>
-        <version>7.1.1-1.v4d297985f397</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -128,7 +116,6 @@
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>jackson-annotations2-api</artifactId>
-      <version>2.21-7.v4777a_f3a_a_d47</version>
     </dependency>
 
     <dependency>
